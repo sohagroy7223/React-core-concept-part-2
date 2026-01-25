@@ -1,3 +1,4 @@
+import Counter from "./Counter";
 import "./App.css";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
   return (
     <>
       <h2>React core concept part 2</h2>
+      <Counter></Counter>
       <div>
         <button className="btn" onClick={handleClick}>
           click me
