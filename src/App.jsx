@@ -8,6 +8,11 @@ function App() {
   function handleClick() {
     alert("first click");
   }
+
+  const handelAdd5 = (num) => {
+    const total = num + 5;
+    alert(total);
+  };
   return (
     <>
       <h2>React core concept part 2</h2>
@@ -25,6 +30,17 @@ function App() {
           }}
         >
           click me3
+        </button>
+        <button
+          className="btn"
+          onClick={() => {
+            alert("btn click 4");
+          }}
+        >
+          click me 4
+        </button>
+        <button className="btn" onClick={() => handelAdd5(10)}>
+          btn 5
         </button>
       </div>
     </>
