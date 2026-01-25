@@ -4,7 +4,7 @@ export default function Counter() {
   const [count, setCount] = useState(0);
 
   const handelAdd = () => {
-    let newCount = count + 1;
+    const newCount = count + 1;
     setCount(newCount);
   };
 

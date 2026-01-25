@@ -1,5 +1,6 @@
 import Counter from "./Counter";
 import "./App.css";
+import Baller from "./baller";
 
 function App() {
   const handleClick2 = () => {
@@ -17,6 +18,7 @@ function App() {
   return (
     <>
       <h2>React core concept part 2</h2>
+      <Baller></Baller>
       <Counter></Counter>
       <div>
         <button className="btn" onClick={handleClick}>
