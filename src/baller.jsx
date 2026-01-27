@@ -2,6 +2,7 @@ import { useState } from "react";
 
 export default function Baller() {
   const [ball, setBall] = useState(0);
+  const [over, setOver] = useState(0);
   const handel1 = () => {
     setBall("1 st ball");
   };
@@ -18,6 +19,8 @@ export default function Baller() {
     setBall("5 th ball");
   };
   const handel6 = () => {
+    const update = over + 1;
+    setOver(update);
     setBall("6 th ball");
   };
   const yet = () => {
@@ -29,9 +32,13 @@ export default function Baller() {
       alert("ke ra vai ");
     }
   };
+
   return (
     <div>
       <h3>ball num: {ball}</h3>
+      <p>
+        <small>over: {over}</small>
+      </p>
       <button onClick={handel1}>1st ball </button>
       <button onClick={handel2}>2nd ball </button>
       <button onClick={handel3}>3rd ball </button>
