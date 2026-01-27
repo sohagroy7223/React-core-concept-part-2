@@ -1,8 +1,14 @@
 import Counter from "./Counter";
 import "./App.css";
 import Baller from "./baller";
+import User from "./Users";
+import { Suspense } from "react";
 
 function App() {
+  const userData = fetch("https://jsonplaceholder.typicode.com/users").then(
+    (res) => res.json(),
+  );
+
   const handleClick2 = () => {
     alert("second click");
   };
@@ -18,6 +24,9 @@ function App() {
   return (
     <>
       <h2>React core concept part 2</h2>
+      <Suspense fallback={<h3>loading data ...</h3>}>
+        <User userData={userData}></User>
+      </Suspense>
       <Baller></Baller>
       <Counter></Counter>
       <div>
