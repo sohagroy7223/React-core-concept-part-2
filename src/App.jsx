@@ -3,8 +3,16 @@ import "./App.css";
 import Baller from "./baller";
 import User from "./Users";
 import { Suspense } from "react";
+import Post from "./post";
+
+const friends = async () => {
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+  return res.json();
+};
 
 function App() {
+  const postPromise = friends();
+
   const userData = fetch("https://jsonplaceholder.typicode.com/users").then(
     (res) => res.json(),
   );
@@ -24,9 +32,14 @@ function App() {
   return (
     <>
       <h2>React core concept part 2</h2>
-      <Suspense fallback={<h3>loading data ...</h3>}>
+      {/* <Suspense fallback={<h3>loading data ...</h3>}>
         <User userData={userData}></User>
+      </Suspense> */}
+
+      <Suspense fallback={<h3>friends are coming...</h3>}>
+        <Post postPromise={postPromise}></Post>
       </Suspense>
+
       <Baller></Baller>
       <Counter></Counter>
       <div>
