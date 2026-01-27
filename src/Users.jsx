@@ -1,12 +1,16 @@
+import User from "./user";
 import { use } from "react";
 import "./App.css";
-export default function User({ userData }) {
-  const user = use(userData);
-  console.log(user);
+export default function Users({ userData }) {
+  const users = use(userData);
+  console.log(users);
 
   return (
     <div className="card">
-      <h3>user:{user.length} </h3>
+      <h3>users:{users.length} </h3>
+      {users.map((user) => (
+        <User user={user}></User>
+      ))}
     </div>
   );
 }
