@@ -2,6 +2,7 @@ import Counter from "./Counter";
 import Comments from "./comments";
 import "./App.css";
 import Baller from "./baller";
+import Players from "./players";
 import Users from "./Users";
 import { Suspense } from "react";
 import Post from "./post";
@@ -10,9 +11,9 @@ import Post from "./post";
 //   const res = await fetch("https://jsonplaceholder.typicode.com/posts");
 //   return res.json();
 // };
-const CommentsData = fetch(
-  "https://jsonplaceholder.typicode.com/comments",
-).then((res) => res.json());
+// const CommentsData = fetch(
+//   "https://jsonplaceholder.typicode.com/comments",
+// ).then((res) => res.json());
 
 function App() {
   // const postPromise = friends();
@@ -35,9 +36,11 @@ function App() {
   };
   return (
     <>
-      <Suspense fallback={<h3>Loading comment data...</h3>}>
+      <Players></Players>
+
+      {/* <Suspense fallback={<h3>Loading comment data...</h3>}>
         <Comments CommentsData={CommentsData}></Comments>
-      </Suspense>
+      </Suspense> */}
 
       {/* <h2>React core concept part 2</h2>
       <Suspense fallback={<h3>loading data ...</h3>}>
