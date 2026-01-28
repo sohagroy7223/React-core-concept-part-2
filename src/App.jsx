@@ -35,7 +35,7 @@ function App() {
   };
   return (
     <>
-      <Suspense>
+      <Suspense fallback={<h3>Loading comment data...</h3>}>
         <Comments CommentsData={CommentsData}></Comments>
       </Suspense>
 
