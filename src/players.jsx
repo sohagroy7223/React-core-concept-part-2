@@ -11,9 +11,11 @@ export default function Players() {
   return (
     <div className="cards">
       <h3>players: {players.length} </h3>
-      {players.map((player) => (
-        <li>{player.name}</li>
-      ))}
+      <ol>
+        {players.map((player) => (
+          <li>{player.name}</li>
+        ))}
+      </ol>
     </div>
   );
 }
