@@ -6,7 +6,7 @@ import Players from "./players";
 import Users from "./Users";
 import { Suspense } from "react";
 import Post from "./post";
-
+import Count from "./practice task/count";
 // const friends = async () => {
 //   const res = await fetch("https://jsonplaceholder.typicode.com/posts");
 //   return res.json();
@@ -15,12 +15,12 @@ import Post from "./post";
 //   "https://jsonplaceholder.typicode.com/comments",
 // ).then((res) => res.json());
 
+// const userData = fetch("https://jsonplaceholder.typicode.com/users").then(
+//   (res) => res.json(),
+// );
+
 function App() {
   // const postPromise = friends();
-
-  // const userData = fetch("https://jsonplaceholder.typicode.com/users").then(
-  //   (res) => res.json(),
-  // );
 
   const handleClick2 = () => {
     alert("second click");
@@ -36,7 +36,9 @@ function App() {
   };
   return (
     <>
-      <Players></Players>
+      <Count></Count>
+
+      {/* <Players></Players> */}
 
       {/* <Suspense fallback={<h3>Loading comment data...</h3>}>
         <Comments CommentsData={CommentsData}></Comments>
