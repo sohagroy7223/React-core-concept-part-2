@@ -9,7 +9,7 @@ export default function Count() {
   }
   function decrement() {
     const updateNum = count - 1;
-    updateNum < 0 ? alert("not allow") : setCount(updateNum);
+    updateNum < 0 ? alert("- not allow") : setCount(updateNum);
   }
 
   function resat() {
@@ -21,7 +21,7 @@ export default function Count() {
       <h3>count :{count} </h3>
       <button onClick={increment}>+1</button>
       <button onClick={decrement}>-1</button>
-      <button onClick={resat}>resat</button>
+      <button onClick={resat}>reset</button>
     </div>
   );
 }

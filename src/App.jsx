@@ -7,6 +7,7 @@ import Users from "./Users";
 import { Suspense } from "react";
 import Post from "./post";
 import Count from "./practice task/count";
+import Display from "./practice task/ShowHide";
 // const friends = async () => {
 //   const res = await fetch("https://jsonplaceholder.typicode.com/posts");
 //   return res.json();
@@ -36,8 +37,8 @@ function App() {
   };
   return (
     <>
+      <Display></Display>
       <Count></Count>
-
       {/* <Players></Players> */}
 
       {/* <Suspense fallback={<h3>Loading comment data...</h3>}>
