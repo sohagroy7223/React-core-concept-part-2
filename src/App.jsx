@@ -8,6 +8,7 @@ import { Suspense } from "react";
 import Post from "./post";
 import Count from "./practice task/count";
 import Display from "./practice task/ShowHide";
+import Show from "./practice task/recapShow";
 // const friends = async () => {
 //   const res = await fetch("https://jsonplaceholder.typicode.com/posts");
 //   return res.json();
@@ -37,6 +38,7 @@ function App() {
   };
   return (
     <>
+      <Show></Show>
       <Display></Display>
       <Count></Count>
       {/* <Players></Players> */}
