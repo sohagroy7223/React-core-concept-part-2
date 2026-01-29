@@ -9,6 +9,7 @@ import Post from "./post";
 import Count from "./practice task/count";
 import Display from "./practice task/ShowHide";
 import Show from "./practice task/recapShow";
+import AllUsers from "./practice task/userList";
 // const friends = async () => {
 //   const res = await fetch("https://jsonplaceholder.typicode.com/posts");
 //   return res.json();
@@ -22,6 +23,9 @@ import Show from "./practice task/recapShow";
 // );
 
 function App() {
+  const Users = fetch("https://jsonplaceholder.typicode.com/users").then(
+    (res) => res.json(),
+  );
   // const postPromise = friends();
 
   const handleClick2 = () => {
@@ -38,6 +42,9 @@ function App() {
   };
   return (
     <>
+      <Suspense>
+        <AllUsers Users={Users}></AllUsers>
+      </Suspense>
       <Show></Show>
       <Display></Display>
       <Count></Count>
